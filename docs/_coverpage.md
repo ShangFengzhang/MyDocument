@@ -4,4 +4,4 @@
 
 
 [Github](https://github.com/ShangFengzhang)
-[开始](diary/Start.md)
+[开始](README.md)
