@@ -11,22 +11,22 @@ Github:[Github](github/github.md)
 2. 安装node.js(运行在服务器端的JavaScript)环境    
 下载地址：[https://nodejs.org/en/download/](https://nodejs.org/en/download/)   
 历史版本：[https://nodejs.org/dist/](https://nodejs.org/dist/)    
-![node下载]((https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/NodeDownloads.png)  
+![node下载](https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/NodeDownloads.png)  
 安装过程：    
-![node安装1]((https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node1.png)  
-![node安装2]((https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node2.png)  
-![node安装3]((https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node3.png)  
-![node安装4]((https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node4.png)  
-![node安装5]((https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node5.png)  
-![node安装6]((https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node6.png)  
-![node安装7]((https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node7.png)  
-![node安装8]((https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node8.png)  	
+![node安装1](https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node1.png)  
+![node安装2](https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node2.png)  
+![node安装3](https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node3.png)  
+![node安装4](https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node4.png)  
+![node安装5](https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node5.png)  
+![node安装6](https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node6.png)  
+![node安装7](https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node7.png)  
+![node安装8](https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/node8.png)  	
 配置环境变量：  
 ```
 C:\Program Files\nodejs\;  
 ```    
 查看版本：  
-![node版本]((https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/NodeVersion.png)
+![node版本](https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/NodeVersion.png)
 
 #### 3.本地工程创建  
 
@@ -39,7 +39,7 @@ npm i docsify-cli -g
 ```
 docsify init ./docs
 ```  
-![docsify初始化]((https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/CreateDocsify.png)  
+![docsify初始化](https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/CreateDocsify.png)  
 成功后会生成一个docs文件夹，其中会生成几个文件：  
  + index.html 网站入口
  + README.md 主页内容渲染
@@ -50,13 +50,13 @@ docsify init ./docs
 ```
 docsify serve docs
 ```  
-  ![docsify启动]((https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/DocsifyStart.png)  
+  ![docsify启动](https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/DocsifyStart.png)  
 
 在浏览器输入： [http://localhost:3000](http://localhost:3000)  
 4. 配置（参考docsify文档和Markdown语法）  
 5. 部署到github  
 创建一个仓库  
-![创建仓库]((https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/CreateRepository.png)   
+![创建仓库](https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/CreateRepository.png)   
 进入docs的上一级目录，在该路径下打开Git Bash Here，将项目提交到GitHub上：  
 ```
 git init //初始化一个仓库    
