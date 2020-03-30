@@ -12,8 +12,8 @@
 	- [Redis](Database/Redis.md)
 - Github
 	- [Github](github/github.md)
-	- [docsifty](github/docsifty.md)
--Markdown
-	-[Markdown](Markdown/Markdown.md)
+	- [docsifty](github/docsify.md)
+- Markdown
+    - [Markdown](Markdown/Markdown.md)
 - 日志
 	- [心情记录](diary/随笔.md)
