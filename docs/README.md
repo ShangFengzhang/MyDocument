@@ -6,4 +6,4 @@
 ## 公众号
 我们搞了一个公众号，暂时还不知道做什么
 
-![公众号二维码](https://raw.githubusercontent.com/ShangFengzhang/MyDocument/master/docs/picture/2.png)
+![公众号二维码](http://188.131.181.191/images/2.png)
