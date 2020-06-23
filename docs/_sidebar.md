@@ -1,6 +1,7 @@
 - Java
 
   - [基础](java/Java基础知识.md)
+  - [Object](java/Java基础知识之Object.md)
 
 
 - 数据结构
@@ -15,6 +16,15 @@
 	- [docsifty](github/docsify.md)
 - Markdown
     - [Markdown](Markdown/Markdown.md)
+- docker
+	- [docker](docker/docker.md)
+- 服务器
+	- [server](server/server.md)
+- 常用命令
+	- [目录](command/catalog.md)
+	- [git](command/git_command.md)
+	- [docsify](command/docsify.md)
+	- [linux](command/linux.md)
 - 一起读书
 	- [目录](book/Catalog.md)   
 		- [致橡树](book/致橡树.md)
