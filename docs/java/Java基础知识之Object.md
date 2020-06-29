@@ -16,7 +16,7 @@ a. “==”与equals
 > （基本数据类型比较其值，引用数据类型比较内存地址）。equals的作用也是判断两个对象是否相等，但一般有两种使用情况：1、当类没有覆盖equals方法时，等价于“==”；2、通过重写equals方法来比较两个对象“值”是否相等。
 
  b. 字符串比较  
-![字符串比较](https://gitee.com/zhangshangfeng/MyDocument/blob/master/docs/picture/==Andeqauls.png)    
+![字符串比较](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/==Andequals.png)    
  c. 重写equals方法时为什么要重写hasCode方法  
 > 两个对象调用equals方法判断相等，那么这两个对象调用hasCode的返回值也相等；反之，两个对象调用的hasCode返回值相等，这两个对象却不一定相等。
 > equals方法必须要满足以下几个特性：  

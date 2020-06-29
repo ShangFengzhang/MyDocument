@@ -22,7 +22,7 @@
 - jre（Java Runtime Environment）java运行时环境
 - jdk（Java Development Kit）java开发包
 
-![jvm、jre、jdk之间的关系](https://gitee.com/zhangshangfeng/MyDocument/blob/master/docs/picture/jvm_jdk_jre.png)
+![jvm、jre、jdk之间的关系](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/jvm_jdk_jre.png)
 
 tips：java是编译和解释共存的语言  
 > 简单来说，编译型语言在程序执行之前有一个单独的编译过程、例如C、C++，编译型语言执行速度快，开发操作系统、大型应用程序、系统数据库等时都采用编译型；解释型语言在运行时将程序翻译成机器语言，例如C#、JavaScript，对不同系统平台兼容性较好

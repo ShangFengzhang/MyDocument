@@ -1,4 +1,87 @@
 ## Java基础知识之Java基本语法
 
-1、注释
-![三种注释类型](https://gitee.com/zhangshangfeng/MyDocument/blob/master/docs/picture/note.png)
+#### 1、注释  
+![三种注释类型](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/note.png)
+
+#### 2、标识符使用规范  
+ 
+- 标识符必须以字母、下划线_、美元符号$开头
+- 标识符其他部分可以是字母、下划线_、美元符号$和数字的任意组合
+- 大小写敏感、长度无限制
+- 不可以是Java关键字
+
+
+**命名**  
+
+有以下几种常见的命名规则：  
+a.驼峰命名法(CamelCase)    
+  
+这种命名方式使用大小写混合格式来区别个别单词，并且单词之间不使用空格隔开或连接字符连接  
+
+ 1) 大驼峰命名法(UpperCamelCase)	  
+ 类名需要使用大驼峰命名法 UserAdmin
+ 
+ 2) 小驼峰命名法（lowerCameCase）  
+ 方法名、参数名、成员变量、局部变量需要使用小驼峰命名法 newPassword
+
+b.蛇形命名法（snake_case）  
+各个单词使用下划线连接,测试方法名、常量、枚举名称使用蛇形命名法，蛇形命名法优势在于单词比较多的时候   set\_password\_test 
+
+c.串式命名法（kebab-case）  
+各单词使用连接符连接，建议项目文件夹名使用
+
+tips：Java基本命名规范  
+1. 包名统一小写，各个单词使用\.分隔符连接，并且单词必须为单数  
+2. 测试方法全部小写，常量及枚举名称全部大写  
+3. 抽象类名使用Abstract开头  
+4. 异常类名使用Exception结尾
+5. 测试类名以要测试的类名称开始，Test结尾
+6. POJO类中布尔类型的变量不要加is前缀
+7. 尽量不要缩写和简写（除非已经被公认）
+
+#### 3、Java关键字  
+![Java关键字](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/keywords.png)
+
+
+#### 4、变量和常量  
+a.变量的类型  
+
+**局部变量**  
+方法或语句块内部定义的变量，从声明位置开始到方法或语句块执行完毕为止，使用前必须声明并初始化
+
+**成员变量** 
+方法外部、类内部定义的变量，生命周期伴随对象始终，会自动初始化 
+
+**静态变量**
+使用static定义，生命周期伴随类始终，会自动初始化
+
+b.final  
+使用final定义常量
+
+
+#### 5、数据类型
+a.基本数据类型    
+b.引用数据类型（4个字节）  
+![Java关键字](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/dataType.png)
+
+|类型 |存储空间 | 范围 |
+|-----|----| ----|
+|byte |1字节  |-128~127  |
+|short| 2字节 |-2^16~2^16-1 |
+|int|4字节|-2^32~2^32-1 |
+|long|8字节|-2^64~2^64-1|
+|float|4字节|-3.403E38~3.403E38|
+|double|8字节|-1.798E308~1.798E308|
+|char|2字节|Unicode编码，65536个字符|
+|boolean|1bit|true或false|
+整型常量默认是int类型，表示long类型在数字末尾加“l”或“L”    
+float精确到7位有效数字，double更多一点，浮点型常量默认是double类型，表示float类型在数字末尾加“f”或“F”    
+使用BigDecimal进行浮点数比较，或者进行精度计算
+
+#### 6、运算符  
+整数运算：一个为Long，结果为Long，否则为int  
+浮点数运算：一个为double，结果为double，两个都为float结果为float
+取余%：结果和左操作数符号相同
+++a和a++:先赋值和后赋值
+
+**自动类型转换**
