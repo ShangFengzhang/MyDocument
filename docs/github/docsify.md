@@ -11,22 +11,22 @@ Github:[Github](github/github.md)
 2. 安装node.js(运行在服务器端的JavaScript)环境    
 下载地址：[https://nodejs.org/en/download/](https://nodejs.org/en/download/)   
 历史版本：[https://nodejs.org/dist/](https://nodejs.org/dist/)    
-![node下载](http://121.191.56.13:8081/NodeDownloads.png)  
+![node下载](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/NodeDownloads.png)  
 安装过程：    
-![node安装1](http://121.191.56.13:8081/node1.png)  
-![node安装2](http://121.191.56.13:8081/node2.png)  
-![node安装3](http://121.191.56.13:8081/node3.png)  
-![node安装4](http://121.191.56.13:8081/node4.png)  
-![node安装5](http://121.191.56.13:8081/node5.png)  
-![node安装6](http://121.191.56.13:8081/node6.png)  
-![node安装7](http://121.191.56.13:8081/node7.png)  
-![node安装8](http://121.191.56.13:8081/node8.png)  	
+![node安装1](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/node1.png)  
+![node安装2](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/node2.png)  
+![node安装3](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/node3.png)  
+![node安装4](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/node4.png)  
+![node安装5](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/node5.png)  
+![node安装6](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/node6.png)  
+![node安装7](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/node7.png)  
+![node安装8](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/node8.png)  	
 配置环境变量：  
 ```
 C:\Program Files\nodejs\;  
 ```    
 查看版本：  
-![node版本](http://121.191.56.13:8081/NodeVersion.png)
+![node版本](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/NodeVersion.png)
 
 #### 3.本地工程创建  
 
@@ -39,7 +39,7 @@ npm i docsify-cli -g
 ```
 docsify init ./docs
 ```  
-![docsify初始化](http://121.191.56.13:8081/CreateDocsify.png)  
+![docsify初始化](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/CreateDocsify.png)  
 成功后会生成一个docs文件夹，其中会生成几个文件：  
  + index.html 网站入口
  + README.md 主页内容渲染
@@ -50,13 +50,13 @@ docsify init ./docs
 ```
 docsify serve docs
 ```  
-  ![docsify启动](http://121.191.56.13:8081/DocsifyStart.png)  
+  ![docsify启动](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/DocsifyStart.png)  
 
 在浏览器输入： [http://localhost:3000](http://localhost:3000)  
 4. 配置（参考docsify文档和Markdown语法）  
 5. 部署到github  
 创建一个仓库  
-![创建仓库](http://121.191.56.13:8081/CreateRepository.png)   
+![创建仓库](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/CreateRepository.png)   
 进入docs的上一级目录，在该路径下打开Git Bash Here，将项目提交到GitHub上：  
 ```
 git init //初始化一个仓库    
