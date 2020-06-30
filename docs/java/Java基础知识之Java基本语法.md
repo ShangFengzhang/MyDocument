@@ -40,7 +40,7 @@ tips：Java基本命名规范
 7. 尽量不要缩写和简写（除非已经被公认）
 
 #### 3、Java关键字  
-![Java关键字](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/keywords.png)
+![Java关键字](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/keyword.png)
 
 
 #### 4、变量和常量  
@@ -79,9 +79,120 @@ float精确到7位有效数字，double更多一点，浮点型常量默认是do
 使用BigDecimal进行浮点数比较，或者进行精度计算
 
 #### 6、运算符  
-整数运算：一个为Long，结果为Long，否则为int  
-浮点数运算：一个为double，结果为double，两个都为float结果为float
-取余%：结果和左操作数符号相同
-++a和a++:先赋值和后赋值
 
-**自动类型转换**
+
+- 整数运算：一个为Long，结果为Long，否则为int  
+- 浮点数运算：一个为double，结果为double，两个都为float结果为float
+- 取余%：结果和左操作数符号相同  
+- ++a和a++:先赋值和后赋值  
+- 关系运算符：char类型也可以比较    
+- 逻辑运算符：&&、||的短路情况
+- 位运算符：转化成二进制进行运算，左移一位相当于\*2，右移一位相当于/2   （左移n位，*2^n）
+- 字符串连接符+：有一个String则结果为String类型
+- 条件运算符：x?y:z
+
+
+
+
+**自动类型转换**  
+由容量小转换为容量大的（表数范围）  
+![Java关键字](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/automaticType.png)  
+tips：整型值可以直接赋值进行转化    
+    
+```java
+int a=10;  
+short b=a;
+```
+
+类型转换常见异常：  
+溢出；数据丢失（先将一个因子容量进行提升）
+
+#### 7、键盘输入  
+```java
+Scanner scanner = new Scanner(System.in);
+String a = scanner.nextLine();
+Integer b = scanner.nextInt();
+System.out.println("a:" + a);
+System.out.println("b:" + b);
+```
+
+#### 8、控制语句
+
+**1. 顺序结构**  
+
+
+**2. 选择结构**  
+if语句：  
+```java
+if (a > 0) {
+    return true;
+}
+```
+
+```java
+if(a > 0){
+	return true;
+}else{
+	return false;
+}
+```
+
+```java
+if(a > 0){
+	return true;
+}else if{a < 0}{
+	return false;
+}else{
+	return 0;
+}
+```
+
+switch语句：  
+```java  
+switch(a){
+case 1:
+	System.out.println(1);
+	break;
+case 2:
+	System.out.println(2);
+	break;
+case 3:
+	System.out.println(3);
+	break;
+default:
+	System.out.println(0);
+}
+```
+
+**3. 循环结构**    
+
+while循环:  
+```java
+int i=0;
+while(i<10){
+	i++;
+}
+```
+
+do-while循环：不管条件是否成立必然执行一次
+```java
+do{
+	i++;
+}while(i<10)
+```
+
+for循环：    
+```java
+for(int i=0;i<10;i++){
+	System.out.println(i);
+}
+```
+
+tips:break跳出整个循环；continue跳出本次循环
+
+#### 9、方法
+java中为什么只有值传递  
+重载和重写的区别  
+> 重载发生在同一个类中，重写发生在父子类中  
+> 重载：方法名相同，参数类型不同、个数不同、顺序不同，返回值和修饰符可以不同  
+> 重写：方法名、参数列表、返回值必须相同，异常范围小于等于父类，访问修饰符大于等于父类，private/final/static方法不能重写

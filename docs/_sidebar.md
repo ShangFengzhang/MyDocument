@@ -1,10 +1,11 @@
 - Java
 
-  - [基础](java/Java基础知识.md)
+  - [目录](java/Java基础知识.md)
   - [Object](java/Java基础知识之Object.md)
   - [Java入门](java/Java基础知识之Java入门.md)
   - [Java安装](java/Java基础知识之Java安装.md)
   - [Java基本语法](java/Java基础知识之Java基本语法.md)
+  - [面向对象](java/Java基础知识之面向对象.md)
 
 
 - 数据结构
