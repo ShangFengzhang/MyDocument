@@ -8,4 +8,4 @@
 
 ![公众号二维码](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/2.jpg)  
 
-[在线阅读](https://shangfengzhang.github.io/MyDocument/#/)
+[在线阅读](http://zhangshangfeng.gitee.io/mydocument/#/)
