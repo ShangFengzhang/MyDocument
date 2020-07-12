@@ -16,7 +16,7 @@ sudo apt install git-all
   
 + 在windows上安装git   
 直接下载Git for Windows安装包  
-![windos git安装 ](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/GitWindows.png)  
+![windos git安装 ](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/gitWindows.png)  
 安装完成后  
 桌面上鼠标右键会有Git Bash Here菜单，单击出现如下界面则安装成功  
 ![git命令行](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/GitBashHere.png)
