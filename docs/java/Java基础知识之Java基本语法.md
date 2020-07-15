@@ -1,4 +1,4 @@
-## Java基础知识之Java基本语法
+## Java基本语法
 
 #### 1、注释  
 ![三种注释类型](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/note.png)
@@ -191,7 +191,8 @@ for(int i=0;i<10;i++){
 tips:break跳出整个循环；continue跳出本次循环
 
 #### 9、方法
-java中为什么只有值传递  
+java在进行方法调用时都是值传递，即将实参的一个副本传递给形参进行调用。  
+
 重载和重写的区别  
 > 重载发生在同一个类中，重写发生在父子类中  
 > 重载：方法名相同，参数类型不同、个数不同、顺序不同，返回值和修饰符可以不同  
