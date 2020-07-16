@@ -10,7 +10,7 @@
 
 - 设计模式
   - [目录](javaDesign/java设计模式.md)  
-		- [单例模式](javaDesign/singleton.md)
+	 - [单例模式](javaDesign/singleton.md)
 
 
 - 数据结构
