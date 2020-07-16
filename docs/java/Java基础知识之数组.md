@@ -16,3 +16,10 @@
 	
 ```
 
+
+#### arraycopy()
+
+    public static void main(String[] args){
+		System.arraycopy(src,srcPos,dest,destPos,length);
+		System.arraycopy(arr, 0, copyArr, 0, arr.length);
+	}

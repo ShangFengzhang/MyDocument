@@ -18,7 +18,8 @@ a. “==”与equals
  b. 字符串比较  
 ![字符串比较](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/==Andequals.png)    
  c. 重写equals方法时为什么要重写hasCode方法  
-> 两个对象调用equals方法判断相等，那么这两个对象调用hasCode的返回值也相等；反之，两个对象调用的hasCode返回值相等，这两个对象却不一定相等。
+> 两个对象调用equals方法判断相等，那么这两个对象调用hasCode的返回值也相等；反之，两个对象调用的hasCode返回值相等，这两个对象却不一定相等。  
+> **hashCode()的默认行为是对堆上的对象产生独特值。如果没有重写 hashCode()，则该 class 的两个对象无论如何都不会相等（即使这两个对象指向相同的数据）**  
 > equals方法必须要满足以下几个特性：  
 > 1. 自反性，即x.equals(x)==true  
 > 2. 对称性，即x.equals(y)==y.equals(x)  
