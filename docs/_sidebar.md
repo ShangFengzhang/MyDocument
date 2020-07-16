@@ -6,7 +6,14 @@
  	 - [Java入门](java/Java基础知识之Java入门.md)
  	 - [Java安装](java/Java基础知识之Java安装.md)
  	 - [Java基本语法](java/Java基础知识之Java基本语法.md)
- 	 - [面向对象](java/Java基础知识之类与对象.md)
+ 	 - [类与对象](java/Java基础知识之类与对象.md)
+ 	 - [抽象](java/Java基础知识之抽象.md)
+ 	 - [数组](java/Java基础知识之数组.md)
+ 	 - [String](java/Java基础知识之String.md)
+ 	 - [LocalDate类](java/Java基础知识之LocalDate类.md)
+ 	 - [File类](java/Java基础知识之File类.md)
+ 	 - [异常](java/Java基础知识之异常.md)
+ 	 - [容器](java/Java基础知识之容器.md)
 
 - 设计模式
   - [目录](javaDesign/java设计模式.md)  
