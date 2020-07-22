@@ -1,9 +1,17 @@
 ## Java基本语法
 
-#### 1、注释  
+1. [注释](#a)
+2. [标识符使用规范](#b)
+3. [Java关键字](#c)
+
+
+
+
+<h3 id="a"> 1、注释  </h3>  
+
 ![三种注释类型](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/note.png)
 
-#### 2、标识符使用规范  
+<h3 id="b"> 2、标识符使用规范  </h3>
  
 - 标识符必须以字母、下划线_、美元符号$开头
 - 标识符其他部分可以是字母、下划线_、美元符号$和数字的任意组合
@@ -14,7 +22,8 @@
 **命名**  
 
 有以下几种常见的命名规则：  
-a.驼峰命名法(CamelCase)    
+
+<h4>a.驼峰命名法(CamelCase) </h4>    
   
 这种命名方式使用大小写混合格式来区别个别单词，并且单词之间不使用空格隔开或连接字符连接  
 
@@ -24,10 +33,10 @@ a.驼峰命名法(CamelCase)
  2) 小驼峰命名法（lowerCameCase）  
  方法名、参数名、成员变量、局部变量需要使用小驼峰命名法 newPassword
 
-b.蛇形命名法（snake_case）  
+<h4>b.蛇形命名法（snake_case）</h4>  
 各个单词使用下划线连接,测试方法名、常量、枚举名称使用蛇形命名法，蛇形命名法优势在于单词比较多的时候   set\_password\_test 
 
-c.串式命名法（kebab-case）  
+<h4>c.串式命名法（kebab-case）</h4>  
 各单词使用连接符连接，建议项目文件夹名使用
 
 tips：Java基本命名规范  
@@ -39,11 +48,10 @@ tips：Java基本命名规范
 6. POJO类中布尔类型的变量不要加is前缀
 7. 尽量不要缩写和简写（除非已经被公认）
 
-#### 3、Java关键字  
+<h3 id="c"> 3、Java关键字 </h3> 
 ![Java关键字](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/keyword.png)
 
-
-#### 4、变量和常量  
+<h3 id="d">  4、变量和常量  </h3>  
 a.变量的类型  
 
 **局部变量**  
@@ -58,8 +66,8 @@ a.变量的类型
 b.final  
 使用final定义常量
 
+<h3 id="e">   5、数据类型  </h3> 
 
-#### 5、数据类型
 a.基本数据类型    
 b.引用数据类型（4个字节）  
 ![Java关键字](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/dataType.png)
@@ -86,7 +94,7 @@ float精确到7位有效数字，double更多一点，浮点型常量默认是do
 
 
 
-#### 6、运算符  
+<h3 id="f"> 6、运算符</h3>  
 
 
 - 整数运算：一个为Long，结果为Long，否则为int  
@@ -115,7 +123,7 @@ short b=a;
 类型转换常见异常：  
 溢出；数据丢失（先将一个因子容量进行提升）
 
-#### 7、键盘输入  
+<h3 id="g">7、键盘输入 </h3>  
 ```java
 Scanner scanner = new Scanner(System.in);
 String a = scanner.nextLine();
@@ -124,7 +132,7 @@ System.out.println("a:" + a);
 System.out.println("b:" + b);
 ```
 
-#### 8、控制语句
+<h3 id="h"> 8、控制语句 </h3>
 
 **1. 顺序结构**  
 
@@ -198,7 +206,7 @@ for(int i=0;i<10;i++){
 
 tips:break跳出整个循环；continue跳出本次循环
 
-#### 9、方法
+<h3 id="i"> 9、方法</h3>
 java在进行方法调用时都是值传递，即将实参的一个副本传递给形参进行调用。  
 
 重载和重写的区别  
@@ -206,7 +214,7 @@ java在进行方法调用时都是值传递，即将实参的一个副本传递�
 > 重载：方法名相同，参数类型不同、个数不同、顺序不同，返回值和修饰符可以不同  
 > 重写：方法名、参数列表、返回值必须相同，异常范围小于等于父类，访问修饰符大于等于父类，private/final/static方法不能重写
 
-#### 10、枚举
+<h3 id="j"> 10、枚举</h3>
 当需要定义一组常量时可以使用枚举  
 尽量不要使用枚举的高级特性
 

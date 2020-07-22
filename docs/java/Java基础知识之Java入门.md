@@ -1,6 +1,6 @@
 ## Java入门
 
-### 一.Java语言特点
+<h3> 1.Java语言特点 </h3>
 1. 跨平台/可移植性
 2. 安全性
 3. **面向对象**
@@ -11,13 +11,13 @@
 8. 健壮性
 
 
-### 二.Java三大版本：  
+<h3> 2.Java三大版本：</h3>  
 1. JavaSE（Java Standard Edition）：标准版，定位在个人计算机的应用。  
 2. **JavaEE**（Java Enterprise Edition）：企业版，定位在服务器端的应用。  	   
 3. JavaEE（Java Micro Edition）：微型版，定位在消费性电子产品的应用。
 
 
-### 三、JVM、JDK、JRE
+<h3> 3.JVM、JDK、JRE </h3>
 - jvm（Java Virtual Machine）java虚拟机
 - jre（Java Runtime Environment）java运行时环境
 - jdk（Java Development Kit）java开发包
