@@ -3,6 +3,13 @@
 1. [注释](#a)
 2. [标识符使用规范](#b)
 3. [Java关键字](#c)
+4. [变量和常量](#d)
+5. [数据类型](#e)
+6. [运算符](#f)
+7. [键盘输入](#g)
+8. [控制语句](#h)
+9. [方法](#i)
+10. [枚举](#j)
 
 
 
@@ -47,12 +54,12 @@ tips：Java基本命名规范
 5. 测试类名以要测试的类名称开始，Test结尾
 6. POJO类中布尔类型的变量不要加is前缀
 7. 尽量不要缩写和简写（除非已经被公认）
-
-<h3 id="c"> 3、Java关键字 </h3> 
+ 
+<h3 id="c"> 3、Java关键字 </h3>   
 ![Java关键字](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/keyword.png)
 
 <h3 id="d">  4、变量和常量  </h3>  
-a.变量的类型  
+<h4>a.变量的类型 </h4> 
 
 **局部变量**  
 方法或语句块内部定义的变量，从声明位置开始到方法或语句块执行完毕为止，使用前必须声明并初始化
@@ -63,13 +70,13 @@ a.变量的类型
 **静态变量**
 使用static定义，生命周期伴随类始终，会自动初始化
 
-b.final  
+<h4>b.final</h4>  
 使用final定义常量
 
 <h3 id="e">   5、数据类型  </h3> 
 
-a.基本数据类型    
-b.引用数据类型（4个字节）  
+<h4>a.基本数据类型 </h4>   
+<h4>b.引用数据类型（4个字节）</h4>  
 ![Java关键字](https://gitee.com/zhangshangfeng/MyDocument/raw/master/docs/picture/dataType.png)
 
 |类型 |存储空间 | 范围 |

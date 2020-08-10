@@ -2,7 +2,7 @@
 
 > 数组是相同类型数据的有序集合
 
-#### 数组的特点：
+<h3> 数组的特点：</h3>
 1. java中数组是定长的，大小不能被改变
 2. 数组中的元素必须是相同类型
 3. 数组可以是任意类型
@@ -17,7 +17,7 @@
 ```
 
 
-#### arraycopy()
+<h3> arraycopy()</h3>
 
     public static void main(String[] args){
 		System.arraycopy(src,srcPos,dest,destPos,length);

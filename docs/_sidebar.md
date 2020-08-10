@@ -1,46 +1,19 @@
-- [**Java**](java/catalog.md)
-	- [Object](java/Java基础知识之Object.md)
-	- [Java入门](java/Java基础知识之Java入门.md)
-	- [Java安装](java/Java基础知识之Java安装.md)
-	- [Java基本语法](java/Java基础知识之Java基本语法.md)
-	- [类与对象](java/Java基础知识之类与对象.md)
-	- [抽象](java/Java基础知识之抽象.md)
-	- [数组](java/Java基础知识之数组.md)
-	- [String](java/Java基础知识之String.md)
-	- [LocalDate类](java/Java基础知识之LocalDate类.md)
-	- [File类](java/Java基础知识之File类.md)
-	- [异常](java/Java基础知识之异常.md)
-	- [容器](java/Java基础知识之容器.md)
-	- [IO](java/Java基础知识之IO.md)
+- [Java](java/catalog.md)
 
 - [**设计模式**](javaDesign/catalog.md) 
-	- [单例模式](javaDesign/singleton.md)
-
+	
 - [**数据结构**](DataStructure/catalog.md)
-	- [LeetCode](DataStructure/LeetCode.md)
-
+	
 - [**数据库**](Database/catalog.md)
-	- [Mysql](Database/mysql.md)
-	- [Redis](Database/Redis.md)
+
 - [**Github**](github/catalog.md)
-	- [Github](github/github.md)
-	- [docsifty](github/docsify.md)
+
 - [**Markdown**](Markdown/catalog.md)
-	- [Markdown基本使用](Markdown/Markdown.md)
-	- [Markdown高级技巧](Markdown/MarkdownSenior.md)
+
 - [**docker**](docker/catalog.md)
-	- [docker](docker/docker.md)
+
 - [**服务器**](server/catalog.md)
-	- [server](server/server.md)
+	
 - [**常用命令**](command/catalog.md)
-	- [git](command/git_command.md)
-	- [docsify](command/docsify.md)
-	- [linux](command/linux.md)
+
 - [**一起读书**](book/catalog.md)   
-	- [致橡树](book/致橡树.md)
-	- [侠客行](book/侠客行.md)
-	- [访戴天道士不遇](book/访戴天道士不遇.md)
-	- [长干行·其一](book/长干行·其一.md)
-	- [风雨](book/风雨.md)
-	- [小重山·昨夜寒蛰不住飞](book/小重山·昨夜寒蛰不住飞.md)
-	- [青玉案·凌波不过横塘路](book/青玉案·凌波不过横塘路.md)
