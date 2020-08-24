@@ -4,12 +4,16 @@
 
 > 数组就是一种容器，可以**在其中放置对象或基本数据类型**
 
-
 #### 泛型
+
 泛型的本质是“数据类型的参数化”，在调用泛型时必须传入实际类型
 
+##### java泛型的实现方法：类型擦除
+
+java的泛型是伪泛型，这是因为java在编译期间，所有的泛型信息都会被擦掉，**java的泛型基本上都是在编译器这个层次上实现的，在生成的字节码中是不包含泛型中的类型信息的，使用泛型的时候加上类型参数，在编译器编译的时候会去掉，这个过程称为类型擦除**
 
 #### Collection
+
         Collection<String> collection = new ArrayList<>();
         collection.add("我");
         collection.add("爱");
@@ -18,7 +22,7 @@
         System.out.println("集合长度:" + collection.size());
         System.out.println("集合是否为空:" + collection.isEmpty());
         System.out.println("集合是否包含某元素:" + collection.contains("爱"));
-
+    
         Object[] objects = collection.toArray();
         System.out.println(Arrays.toString(objects));    //转换成一个Object数组
 
@@ -33,18 +37,18 @@
         listA.add("aa");
         listA.add("bb");
         listA.add("cc");
-
+    
         List<String> listB=new ArrayList<>();
         listB.add("aa");
         listB.add("dd");
         listB.add("ee");
-
+    
         System.out.println("listA:"+listA);
         System.out.println("listB:"+listB);
-
+    
         listA.addAll(listB);
         System.out.println("将B添加到A中:"+listA);
-
+    
         listA.retainAll(listB);
         System.out.println("移除非交集:"+listA);
         
@@ -55,7 +59,7 @@
 
 ##### List
 List是有序、可重复的容器  
-  
+
         List<String> listA = new ArrayList<>();
         listA.add("aa");
         listA.add("bb");
@@ -69,7 +73,7 @@ List是有序、可重复的容器
         listA.set(2, "你");
         System.out.println("按索引设置值：" + listA);
         listA.add("你");
-
+    
         System.out.println(listA);
         System.out.println("获取索引值位置的元素：" + listA.get(2));
         System.out.println("获取指定元素第一次出现的索引，未找到返回-1："+listA.indexOf("你"));
@@ -90,56 +94,56 @@ ArrayList使用数组实现，查询效率高，增删效率低，线程不安�
 	 * @create: 2020-07-16 16:04
 	 **/
 	public class MyArrayList<T> {
-    private final static int DEFAULT_CAPACITY = 10;
-    private Object[] elementDate;
-    private int size;
-
-    public MyArrayList() {
-        elementDate = new Object[DEFAULT_CAPACITY];
-    }
-
-    public MyArrayList(int capacity) {
-        if (capacity < 0) {
-            throw new IndexOutOfBoundsException();
-        } else if (capacity == 0) {
-            elementDate = new Object[DEFAULT_CAPACITY];
-        } else {
-            elementDate = new Object[capacity];
-        }
-    }
-
-    public void add(T object) {
-        if (size == elementDate.length) {
-            Object[] newArray = new Object[elementDate.length + (elementDate.length >> 1)];
-            System.arraycopy(elementDate, 0, newArray, 0, elementDate.length);
-            elementDate = newArray;
-        }
-        elementDate[size++] = object;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("[");
-        for (int i = 0; i < size; i++) {
-            stringBuilder.append(elementDate[i]).append(",");
-        }
-        stringBuilder.setCharAt(stringBuilder.length() - 1, ']');
-        return stringBuilder.toString();
-    }
+	private final static int DEFAULT_CAPACITY = 10;
+	private Object[] elementDate;
+	private int size;
+	
+	public MyArrayList() {
+	    elementDate = new Object[DEFAULT_CAPACITY];
+	}
+	
+	public MyArrayList(int capacity) {
+	    if (capacity < 0) {
+	        throw new IndexOutOfBoundsException();
+	    } else if (capacity == 0) {
+	        elementDate = new Object[DEFAULT_CAPACITY];
+	    } else {
+	        elementDate = new Object[capacity];
+	    }
+	}
+	
+	public void add(T object) {
+	    if (size == elementDate.length) {
+	        Object[] newArray = new Object[elementDate.length + (elementDate.length >> 1)];
+	        System.arraycopy(elementDate, 0, newArray, 0, elementDate.length);
+	        elementDate = newArray;
+	    }
+	    elementDate[size++] = object;
+	}
+	
+	@Override
+	public String toString() {
+	    StringBuilder stringBuilder = new StringBuilder();
+	    stringBuilder.append("[");
+	    for (int i = 0; i < size; i++) {
+	        stringBuilder.append(elementDate[i]).append(",");
+	    }
+	    stringBuilder.setCharAt(stringBuilder.length() - 1, ']');
+	    return stringBuilder.toString();
+	}
 
 
     public T get(int index) {
         checkRange(index);
         return (T) elementDate[index];
     }
-
+    
     private void checkRange(int index) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
         }
     }
-
+    
     public void set(int index, T element) {
         checkRange(index);
         elementDate[index] = element;
@@ -156,7 +160,7 @@ ArrayList使用数组实现，查询效率高，增删效率低，线程不安�
         elementDate[size--] = null;
         return oldValue;
     }
-
+    
     public boolean remove(T element) {
         if (element == null) {
             for (int i = 0; i < size; i++) {
@@ -175,7 +179,7 @@ ArrayList使用数组实现，查询效率高，增删效率低，线程不安�
         }
         return false;
     }
-	}
+    }
 
 
 
@@ -184,52 +188,52 @@ ArrayList使用数组实现，查询效率高，增删效率低，线程不安�
 LinkedList使用双向链表实现，增删效率高，查找效率低，线程不安全  
 
 	public class MyLinkedList<T> {
-    static class Node<T> {
-        Node previous;
-        Node next;
-        T element;
-
-        public Node() {
-        }
-
-        public Node(T element) {
-            this.element = element;
-        }
-
-        public Node(Node previous, Node next, T element) {
-            this.previous = previous;
-            this.next = next;
-            this.element = element;
-        }
-
-        public Node getPrevious() {
-            return previous;
-        }
-
-        public void setPrevious(Node previous) {
-            this.previous = previous;
-        }
-
-        public Node getNext() {
-            return next;
-        }
-
-        public void setNext(Node next) {
-            this.next = next;
-        }
-
-        public T getElement() {
-            return element;
-        }
-
-        public void setElement(T element) {
-            this.element = element;
-        }
-    }
-
-    private Node first;
-    private Node last;
-    private int size;
+	static class Node<T> {
+	    Node previous;
+	    Node next;
+	    T element;
+	
+	    public Node() {
+	    }
+	
+	    public Node(T element) {
+	        this.element = element;
+	    }
+	
+	    public Node(Node previous, Node next, T element) {
+	        this.previous = previous;
+	        this.next = next;
+	        this.element = element;
+	    }
+	
+	    public Node getPrevious() {
+	        return previous;
+	    }
+	
+	    public void setPrevious(Node previous) {
+	        this.previous = previous;
+	    }
+	
+	    public Node getNext() {
+	        return next;
+	    }
+	
+	    public void setNext(Node next) {
+	        this.next = next;
+	    }
+	
+	    public T getElement() {
+	        return element;
+	    }
+	
+	    public void setElement(T element) {
+	        this.element = element;
+	    }
+	}
+	
+	private Node first;
+	private Node last;
+	private int size;
 
 
     public void add(T object) {
@@ -247,7 +251,7 @@ LinkedList使用双向链表实现，增删效率高，查找效率低，线程�
             size++;
         }
     }
-
+    
     public Node get(int index) {
         checkRange(index);
         Node temp = first;
@@ -262,7 +266,7 @@ LinkedList使用双向链表实现，增删效率高，查找效率低，线程�
         }
         return temp;
     }
-
+    
     private void checkRange(int index) {
         if (index < 0 || index > size - 1) {
             throw new IndexOutOfBoundsException();
@@ -280,7 +284,7 @@ LinkedList使用双向链表实现，增删效率高，查找效率低，线程�
         stringBuilder.setCharAt(stringBuilder.length() - 1, ']');
         return String.valueOf(stringBuilder);
     }
-
+    
     public void remove(int index) {
         Node temp = get(index);
         Node previous = temp.previous;
@@ -293,29 +297,29 @@ LinkedList使用双向链表实现，增删效率高，查找效率低，线程�
         next.previous = temp.previous;
         System.out.println("修改后的next：" + next.element);
         System.out.println("修改后的next的previous指向：" + next.previous.element);
-
+    
         if (index == 0) {
             first = next;
         }
         size--;
     }
-
+    
     public void add(int index, T element) {
         checkRange(index);
         Node newNode = new Node(element);
         Node temp = get(index);
         Node previous = temp.previous;
-
+    
         previous.next = newNode;
         newNode.previous = previous;
-
+    
         newNode.next = temp;
         temp.previous = newNode;
-
+    
         size++;
-
+    
     }
-
+    
     public static void main(String[] args) {
         MyLinkedList<String> myLinkedList = new MyLinkedList();
         myLinkedList.add("a");
@@ -328,9 +332,9 @@ LinkedList使用双向链表实现，增删效率高，查找效率低，线程�
 
         System.out.println(myLinkedList.get(0).element);
         myLinkedList.remove(2);
-
+    
         myLinkedList.add(2, "newNode");
-
+    
         System.out.println(myLinkedList.toString());
     }
 }
@@ -349,41 +353,41 @@ HashMap底层实现使用了哈希表（数组+链表）
 无序、不可重复
 
 
-	
+​	
 ##### 迭代器
 
 		List<String> list = new ArrayList<>();
-        list.add("a");
-        list.add("b");
-        list.add("c");
-
-        for (Iterator<String> iterator = list.iterator(); iterator.hasNext(); ) {
-            String temp = iterator.next();
-            System.out.println(temp);
-        }
-
-        Set<String> set = new HashSet<>();
-        set.add("a");
-        set.add("b");
-        set.add("c");
-        for (Iterator<String> iterator = set.iterator(); iterator.hasNext(); ) {
-            String temp1 = iterator.next();
-            System.out.println(temp1);
-        }
+	    list.add("a");
+	    list.add("b");
+	    list.add("c");
+	
+	    for (Iterator<String> iterator = list.iterator(); iterator.hasNext(); ) {
+	        String temp = iterator.next();
+	        System.out.println(temp);
+	    }
+	
+	    Set<String> set = new HashSet<>();
+	    set.add("a");
+	    set.add("b");
+	    set.add("c");
+	    for (Iterator<String> iterator = set.iterator(); iterator.hasNext(); ) {
+	        String temp1 = iterator.next();
+	        System.out.println(temp1);
+	    }
 
 
         Map<Integer, String> map = new HashMap<>();
         map.put(1, "a");
         map.put(2, "b");
         map.put(3, "c");
-
+    
         Set<Map.Entry<Integer, String>> se = map.entrySet();
-
+    
         for (Iterator<Map.Entry<Integer, String>> iterator = se.iterator(); iterator.hasNext(); ) {
             Map.Entry<Integer, String> temp3 = iterator.next();
             System.out.println(temp3.getKey() + "---" + temp3.getValue());
         }
-
+    
         Set<Integer> si = map.keySet();
         for (Iterator<Integer> integerIterator = si.iterator(); integerIterator.hasNext(); ) {
             Integer key = integerIterator.next();
