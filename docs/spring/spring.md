@@ -256,8 +256,42 @@ AspectJ有两种方式实现AOP
 
 - 定义方法，方法是实现切面功能的
   - 公共方法public
+  
   - 没有返回值
+  
   - 自定义名称
+  
   - 可以有参也可以无参
-    - @Before：前置通知注解，表示在目标类方法之前执行，不会改变目标方法执行结果，不会影响目标方法执行
+    
+    - @Before：前置通知，在目标类方法之前执行，不会改变目标方法执行结果，不会影响目标方法执行
+    - @AfterReturning：后置通知，在目标方法之后执行，能够获取到目标函数的返回值，并可以修改返回值
+      - value：切入点表达式
+      - returning：自定义变量，表示目标方法返回值，变量名必须等于形参名
+    - @Around：环绕通知，必须有返回值，推荐用Object，方法固定参数ProceedingJoinPoint，在方法前后都能增强功能，修改目标方法的执行结果，影响最后的调用结果，相当于jdk动态代理的InvocationHandler接口
+    
+    ``` java
+    proceedingJoinPoint.proceed(); //目标方法调用
+    ```
+    
+    
+    
+    - @AfterThrowing：异常通知
+    - @After：最终通知，总是会执行，在目标方法后执行
+    - @Pointcut：定义和管理切入点
+      - 用在方法上，方法名就是切入点表达式的别名
+      - 其他的通知中value可以使用别名
+    - JoinPoint：要加入切面功能的目标方法
+    
+    ``` java
+    @Before(value="excution(.......)")
+    public void before(JoinPoint joinPoint){
+        joinPoint.getSignature;//获取方法的定义
+        joinPoint.getSignature().getName(); //获取方法名
+        joinPoint.getArgs();//按顺序获取方法参数
+    }
+    ```
+  
+  
+  
+  > 有接口时默认是jdk代理方式，没有接口时用的是cglib动态代理，有接口时可以设置cglib代理方式
 
